@@ -142,7 +142,7 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     else left.filterAcc(p, right.filterAcc(p, acc))
   }
 
-  override def union(that: TweetSet): TweetSet = left union (right union (that incl elem))    // Be casreful!! The complexity is important here! Notice how the parenthesis are placed.
+  override def union(that: TweetSet): TweetSet = left union (right union (that incl elem))    // Be careful!! The complexity is important here! Notice how the parenthesis are placed.
 
   override def mostRetweeted: Tweet = {
     lazy val leftMost: Tweet = left.mostRetweeted
